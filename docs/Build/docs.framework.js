@@ -1994,13 +1994,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4771920: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4771981: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4772045: function() {return Module.webglContextAttributes.powerPreference;},  
- 4772103: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4772158: function($0) {performance.now = function() { return $0; };},  
- 4772206: function($0) {performance.now = function() { return $0; };},  
- 4772254: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4772624: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4772685: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4772749: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4772807: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4772862: function($0) {performance.now = function() { return $0; };},  
+ 4772910: function($0) {performance.now = function() { return $0; };},  
+ 4772958: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -18315,6 +18315,17 @@ function invoke_viffi(index,a1,a2,a3,a4) {
   }
 }
 
+function invoke_vifi(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    dynCall_vifi(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
 function invoke_iiffi(index,a1,a2,a3,a4) {
   var sp = stackSave();
   try {
@@ -18330,17 +18341,6 @@ function invoke_vifii(index,a1,a2,a3,a4) {
   var sp = stackSave();
   try {
     dynCall_vifii(index,a1,a2,a3,a4);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_vifi(index,a1,a2,a3) {
-  var sp = stackSave();
-  try {
-    dynCall_vifi(index,a1,a2,a3);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
