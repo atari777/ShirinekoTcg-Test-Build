@@ -1994,13 +1994,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4810480: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4810541: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4810605: function() {return Module.webglContextAttributes.powerPreference;},  
- 4810663: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4810718: function($0) {performance.now = function() { return $0; };},  
- 4810766: function($0) {performance.now = function() { return $0; };},  
- 4810814: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4810784: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4810845: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4810909: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4810967: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4811022: function($0) {performance.now = function() { return $0; };},  
+ 4811070: function($0) {performance.now = function() { return $0; };},  
+ 4811118: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -18458,17 +18458,6 @@ function invoke_viiiifi(index,a1,a2,a3,a4,a5,a6) {
   }
 }
 
-function invoke_iiffi(index,a1,a2,a3,a4) {
-  var sp = stackSave();
-  try {
-    return dynCall_iiffi(index,a1,a2,a3,a4);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
 function invoke_viiiiiifddfiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14) {
   var sp = stackSave();
   try {
@@ -18484,6 +18473,17 @@ function invoke_viiiiiiffffiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13
   var sp = stackSave();
   try {
     dynCall_viiiiiiffffiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14);
+  } catch(e) {
+    stackRestore(sp);
+    if (e !== e+0) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiffi(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiffi(index,a1,a2,a3,a4);
   } catch(e) {
     stackRestore(sp);
     if (e !== e+0) throw e;
